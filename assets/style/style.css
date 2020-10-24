@@ -6,8 +6,9 @@
     --red: #e34f5f;
     --red-dark: #e43a4b;
     --grey: #a3a5a5;
-    --light-grey: #eee;
-    --black: #212121;
+    --grey-light: #eee;
+    --black-light: #212121;
+    --black-dark: #000;
 }
 html, body{
     height: 100%;
@@ -68,7 +69,7 @@ mark{
     box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, 0.1);
 }
 .grey-bg{
-    background-color: var(--light-grey);
+    background-color: var(--grey-light);
 }
 .container{
     padding: 2rem 1rem;
@@ -80,7 +81,7 @@ mark{
     flex-grow: 1;
 }
 .sticky-header{
-    background-color: var(--black);
+    background-color: var(--black-light);
 }
 
 /* XXX HEADER */
@@ -91,7 +92,7 @@ header{
     border-bottom: 1px solid var(--white-transparent);
     z-index: 10;
     position: fixed;
-    height: 3rem;
+    height: 4rem;
 }
 .header-container{
     margin: 0px 8rem;
@@ -102,30 +103,30 @@ header{
 .brand{
     text-transform: uppercase;
     flex-grow: 2;
+    align-self: center;
 }
 .brand a{
     font-weight: 800;
     font-size: 1.5rem;
 }
 .navbar nav{
-    height: 100%;
+    
 }
 .navbar ul{
     display: inline-flex;
     padding: 0;
-    margin: 0;
+    
     font-size: 1.2rem;
-    height: 100%;
+    
 }
 .navbar li{
-    margin: 0 auto;
-    padding: .1rem .3rem;
+    margin: .1rem .5rem;
     flex-grow: 1;
     line-height: 100%;
-    font-weight: 500;
 }
 .navbar li:hover{
     border-bottom: 1px solid var(--white);
+    margin-bottom: -1px;
 }
 
 /* XXX HOME */
@@ -209,7 +210,7 @@ header{
     padding: 0 .7rem;
 }
 .col-info > p{
-    color: var(--black);
+    color: var(--black-dark);
     font-weight: 500;
 }
 .col-info > p > span{
@@ -226,7 +227,7 @@ header{
 }
 
 .col-info-socials i{
-    color: var(--black);
+    color: var(--black-light);
 }
 .col-info-socials i:hover{
     color: var(--red);
@@ -252,7 +253,7 @@ header{
     background-color: #eee;
 }
 .skill-bar-black{
-    background-color: black;
+    background-color: var(--black-dark);
     height: 5px;
     position: relative;
 }
@@ -343,6 +344,43 @@ header{
     box-shadow: 0 0 0 1px var(--white);  /* YYY border adds 1px; outline doesnt have radius so Ive used css trick with box-shadow*/  
 }
 
+/* XXX PORTFOLIO */
+.portfolio-content{
+    display: flex;
+    flex-flow: column;
+    color: var(--black-light);
+}
+/* YYY navigation */
+.portfolio-filter-container{
+    flex-grow: 1;
+}
+.portfolio-filter-container ul{
+    display: flex;
+    padding: 0;
+    width: 50%;
+    margin: 2rem auto;    
+}
+.portfolio-filter-container li{
+    flex-grow: 1;
+    color: var(--black-dark);
+}
+/* YYY gallery */
+.portfolio-grid--container{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.portfolio-img{
+    position: relative;
+    padding: 1rem;
+}
+.portfolio-img img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* XXX CONTACT */
 .contact-grid--container{
     display: grid;
@@ -395,7 +433,7 @@ header{
     border-radius: .3rem;    
 }
 .contact-form--item4:hover{
-    background-color: var(--black);
+    background-color: var(--black-light);
 }
 
 .contact-info{
@@ -427,12 +465,9 @@ header{
     margin: 0;
 }
 
-
-
-
 /* XXX FOOTER */
 footer{
-    background-color: var(--black);
+    background-color: var(--black-light);
     color: var(--white);
     text-align: center;
     display: grid;
