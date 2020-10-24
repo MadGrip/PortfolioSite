@@ -19,10 +19,10 @@ XXX SERVICES
 DONE fix services grid sticking out of container
 XXX RESUME
 DONE fix resume sticking out of container
-XXXContact
+XXX Contact
 DONE fix contact sticking out of container
-TODO FIX comment input text align
-TODO fix button max width and alignment
+DONE FIX comment input text align
+DONE fix button max width and alignment
 TODO Fix info grid height and paragraph margins
 
 https://www.pxdraft.com/themeforest/martin/index-01.html
@@ -88,7 +88,7 @@ https://preview.themeforest.net/item/niko-resume-wordpress-theme/full_screen_pre
         </div>
     </section>
 
-    <!-- XXX ABOUT -->
+    <!-- XXX ABOUT ME-->
     <section id="about" class="container">
         <!-- YYY TITLE -->
         <div class="section-title">
@@ -110,6 +110,17 @@ https://preview.themeforest.net/item/niko-resume-wordpress-theme/full_screen_pre
                 <p>Birthday: <span>20.04.1998</span></p>
                 <p>Phone: <a href="tel:+421 948 434 841">+421 948 434 841</a></p>
                 <p>E-mail: <a href="mailto:mathiashandle@gmail.com">mathiashandle@gmail.com</a></p>
+                <div class="col-info-socials">
+                    <a href="http:facebook.com">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </a>
+                    <a href="http:instagram.com">
+                        <i class="fab fa-instagram-square fa-2x"></i>
+                    </a>
+                    <a href="http:linkedin.com">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
             </div>
             <!-- YYY SKILLS -->
             <div class="col-skills flex-grow-equal">
@@ -272,7 +283,7 @@ https://preview.themeforest.net/item/niko-resume-wordpress-theme/full_screen_pre
                 <form id="contact-form">
                     <input type="text" name="Name" form="contactForm" class="contact-form--item1" placeholder="Name">
                     <input type="email" name="Email" class="contact-form--item2" form="contactForm" placeholder="E-mail">
-                    <input type="text" name="Comment" class="contact-form--item3" form="contactForm" placeholder="Your comment">
+                    <textarea name="Comment" form="contactForm" class="contact-form--item3" id="" cols="30" rows="10" placeholder="Your comment"></textarea>
                     <button class="contact-form--item4">GET IN TOUCH</button>
                 </form>
             </div>

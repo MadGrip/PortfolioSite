@@ -218,6 +218,20 @@ header{
 .col-info > p > a{
     color: var(--grey);
 }
+.col-info-socials{
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-info-socials i{
+    color: var(--black);
+}
+.col-info-socials i:hover{
+    color: var(--red);
+}
+
 .col-skills{
     width: 33.333333333%;
     margin: 1rem 0;
@@ -356,23 +370,29 @@ header{
     grid-template-rows: 1fr 3fr 1fr;
     grid-gap: 1rem;
 }
+/* YYY Name */
 .contact-form--item1{
     grid-column: 1 / 2;
     min-height: 2rem;
 }
+/* YYY Mail */
 .contact-form--item2{
     grid-column: 2 / -1;
 }
+/* YYY Text Area */
 .contact-form--item3{
     grid-column: 1 / -1;
 }
+/* YYY button */
 .contact-form--item4{
+    width: 30%;
+    margin: 0 auto;
     grid-column: 1 / 3;
     color: var(--white);
     background-color: var(--red-dark);
     font-weight: 700;
     border: none;
-    border-radius: .3rem;
+    border-radius: .3rem;    
 }
 .contact-form--item4:hover{
     background-color: var(--black);
