@@ -17,6 +17,7 @@ body{
     background-color: var(--white);
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    max-width: 1920px;
 }
 section{
     margin-bottom: 2rem;
@@ -244,35 +245,33 @@ header{
 }
 
 /* XXX SERVICES */
-.table{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
 }
-.table-block-container{
-    width: 25%;
-    margin: 1.1rem .7rem;
-}
-.table-block{
+.services-grid--item{
+    text-align: center;
     background-color: var(--white);
-    text-align: center;    
 }
-.table-block > i{
+.services-grid--item i{
     color: var(--red);
     padding: 1.5rem .7rem;
     max-width: 33%;
 }
-.table-block >h6{
+.services-grid--item h6{
     margin-bottom: .5rem;
     letter-spacing: 1px;
 }
-.table-block > p{
+.services-grid--item p {
     margin: 0 auto;
     color: var(--grey);
     text-align: center;
     max-width: 82%;
     padding-bottom: 1.5rem;  
     letter-spacing: 1.5px;
-    font-style: italic;  
+    font-style: italic; 
 }
+
+/* XXX RESUME */
