@@ -41,6 +41,11 @@ h4{
     font-size: 1.5rem;
     margin-top: 0;
 }
+h6{
+    font-size: 1.2rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
 mark{
     background-image: linear-gradient(var(--red), var(--red-dark));
     background-size: 100% 34%;
@@ -50,6 +55,12 @@ mark{
     padding: 0;
     color: currentColor;
 }
+.shadow{
+    box-shadow: rgba(58, 78, 95, 0.2) 0 10px 16px, rgba(58, 78, 95, 0.05) 0 -5px 16px;
+}
+.shadow-blocks{
+    box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, 0.1);
+}
 .grey-bg{
     background-color: var(--light-grey);
 }
@@ -58,9 +69,13 @@ mark{
     margin-left: auto;
     min-width: 1200px;
     max-width: 1200px;
+    padding: 2rem 0;
 }
 .flex-grow-equal{
     flex-grow: 1;
+}
+.sticky-header{
+    background-color: var(--black);
 }
 
 /* XXX HEADER */
@@ -166,9 +181,9 @@ header{
     color: var(--grey);
     font-style: italic;
     padding: 0 20%;
+    letter-spacing: 1px;
 }
 .section-content{
-    box-shadow: rgba(58, 78, 95, 0.2) 0 10px 16px, rgba(58, 78, 95, 0.05) 0 -5px 16px;
     display: flex;
     flex-direction: row;
 }
@@ -229,3 +244,35 @@ header{
 }
 
 /* XXX SERVICES */
+.table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.table-block-container{
+    width: 25%;
+    margin: 1.1rem .7rem;
+}
+.table-block{
+    background-color: var(--white);
+    text-align: center;    
+}
+.table-block > i{
+    color: var(--red);
+    padding: 1.5rem .7rem;
+    max-width: 33%;
+}
+.table-block >h6{
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+}
+.table-block > p{
+    margin: 0 auto;
+    color: var(--grey);
+    text-align: center;
+    max-width: 82%;
+    padding-bottom: 1.5rem;  
+    letter-spacing: 1.5px;
+    font-style: italic;  
+}
