@@ -2,9 +2,11 @@
 XXX SITE
 TODO RESPONSIVE DESIGN
 XXX HEADER
-TODO center text vertically in header
+DONE center text vertically in header
 TODO change color of header when scrolling
 TODO add animations under header links when scrolling
+TODO FIX max header with to be width of container
+TODO add dropdown menu
 XXX HOME
 TODO better resolution for portrait pic
 TODO add animating text I'm ......
@@ -13,7 +15,15 @@ XXX About Me
 TODO add Font Awesome icons + social media links
 TODO add download CV button under information
 DONE fix about me IMG
-
+XXX SERVICES
+DONE fix services grid sticking out of container
+XXX RESUME
+DONE fix resume sticking out of container
+XXXContact
+DONE fix contact sticking out of container
+TODO FIX comment input text align
+TODO fix button max width and alignment
+TODO Fix info grid height and paragraph margins
 
 https://www.pxdraft.com/themeforest/martin/index-01.html
 
@@ -199,50 +209,107 @@ https://preview.themeforest.net/item/niko-resume-wordpress-theme/full_screen_pre
             <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
         </div>
 
-        <div class="resume-grid">
-            <div class="resume-grid--item">
-                <h5>Work</h5>
-                <h6>Apple</h6>
-                <time>Oct 24 - December 31</time>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+        <div class="resume-grid--container">
+            <div class="resume-grid--item shadow">
+                <section>
+                    <h5>Work</h5>
+                    <h6>Apple</h6>
+                    <time>Oct 24 - December 31</time>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                </section>
+                <section>
+                    <h5>Work</h5>
+                    <h6>Apple</h6>
+                    <time>Oct 24 - December 31</time>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                </section>
             </div>
-            
-            <div class="resume-grid--item">
-                <h5>Work</h5>
-                <h6>Apple</h6>
-                <time>Oct 24 - December 31</time>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+
+            <div class="resume-grid--item shadow">
+                <section>
+                    <h5>Work</h5>
+                    <h6>Apple</h6>
+                    <time>Oct 24 - December 31</time>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                </section>
+                <section>
+                    <h5>Work</h5>
+                    <h6>Apple</h6>
+                    <time>Oct 24 - December 31</time>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                </section>
             </div>
         </div>
         </div>
     </section>
-    <!-- XXX Portfolio -->
-    <section id="portfolio" class="grey-bg">
+    <!-- XXX HIRE ME -->
+    <section id="hire">
+        <div class="section-title">
+            <h3>I'm available for freelance</h3>
+            <a href="#contact">HIRE ME NOW</a>
+        </div>
+    </section>
+    <!-- XXX PORTFOLIO -->
+    <section id="portfolio">
         <div class="section-title">
             <h3><mark>My</mark> Portfolio</h3>
             <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
         </div>
     </section>
-    <!-- XXX BLOG -->
-    <section id="blog">
-        <div class="section-title">
-            <h3><mark>My</mark> Blog</h3>
-            <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
-        </div>
-    </section>
     <!-- XXX CONTACT -->
     <section id="contact" class="grey-bg">
+        <div class="container">
         <div class="section-title">
             <h3><mark>My</mark> Contact</h3>
             <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
+        </div>
+
+        <div class="contact-grid--container">
+            <!-- YYY FORM -->
+            <div class="contact-form shadow">
+                <h6>Drop me a line</h6>
+                <p>I'll answer all your questions.</p>
+                <form id="contact-form">
+                    <input type="text" name="Name" form="contactForm" class="contact-form--item1" placeholder="Name">
+                    <input type="email" name="Email" class="contact-form--item2" form="contactForm" placeholder="E-mail">
+                    <input type="text" name="Comment" class="contact-form--item3" form="contactForm" placeholder="Your comment">
+                    <button class="contact-form--item4">GET IN TOUCH</button>
+                </form>
+            </div>
+            <!-- YYY INFO -->
+            <div class="contact-info shadow">
+                <div class="contact-info--item contact-info-grid--container">
+                    <i class="fas fa-map-marker-alt fa-2x contact-info-grid--item1"></i>
+                    <h6 class=" contact-info-grid--item2">Address</h6>
+                    <p class=" contact-info-grid--item3">Obežná 5-3, 010 08 Žilina-Vlčince</p>
+                </div>
+                <div class="contact-info--item contact-info-grid--container">
+                    <i class="fas fa-envelope fa-2x contact-info-grid--item1"></i>
+                    <h6 class=" contact-info-grid--item2">E-mail</h6>
+                    <p class=" contact-info-grid--item3">mathiashandle@gmail.com</p>
+                </div>
+                <div class="contact-info--item contact-info-grid--container">
+                    <i class="fas fa-phone fa-2x contact-info-grid--item1"></i>
+                    <h6 class=" contact-info-grid--item2">Phone</h6>
+                    <p class=" contact-info-grid--item3">+421 948 434 841</p>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 </main>
     
     <!-- XXX FOOTER -->
-    <footer>
-        <div class="footer-top"></div>
-        <div class="footer-bottom"></div>
+    <footer>        
+        <div class="footer-top footer-grid--item">
+            <h2>Mathias</h2>
+            <a href="http://facebook.com"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="http://instagram.com"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="http://linkedin.com"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <div class="footer-bottom footer-grid--item">
+            <p>2020 Design "borrowed" from Theme Forest</p>
+        </div>
     </footer>
 </body>
 
