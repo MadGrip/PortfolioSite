@@ -1,33 +1,35 @@
+/* XXX Header--scrolled */
+/* Header change color */
+const header = document.getElementById("header");
+const home = document.getElementById("home");
+const observerHome = new IntersectionObserver(function(entries, observerHome){
+    entries.forEach(entry => {
+        console.log(entry);
+        if(!entry.isIntersecting){
+            header.classList.add("header--scrolled");
+        }else if(entry.isIntersecting){
+            header.classList.remove("header--scrolled");
+            console.log("removed");
+        }
+    })
+}, {
+    rootMargin: "-20% 0% 0% 0%"
+});
+observerHome.observe(home);
 
-    const scrollBar = window.scrollY;
-    const header = document.querySelector("#header");
-    if(scrollBar >= 500){
-        header.classList.add("sticky-header");
-    }else if(scrollBar < 500){
-        header.classList.remove("sticky-header");
-    }
+/* XXX Responsive design */
+const faServicesIcons = Array.from(document.querySelectorAll(".fa-3x"));
+const faSocial = Array.from(document.querySelectorAll(".fa-facebook-square, .fa-instagram-square, .fa-linkedin"));
 
+console.log(screen.width);
+console.log(faSocial);
 
+if(screen.width <= 425){
+    faServicesIcons.forEach(icon => {
+        icon.classList.remove("fa-3x");
+        icon.classList.add("fa-2x");
+    });
 
-
-
-
-    const services = document.getElementById("services");
-    const options = {
-        root: null,
-        rootMargin: "-250px 0px",
-        treshold: 0
-    };
-
-    const observer = new IntersectionObserver(function(entries, observer){
-        entries.forEach(entry => {
-            console.log(entry);
-        })
-    }, options);
-
-    observer.observe(services);
     
 
-
-
-
+}
