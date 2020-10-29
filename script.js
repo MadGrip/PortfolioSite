@@ -1,30 +1,54 @@
 /* XXX Header--scrolled */
-/* Header change color */
-const header = document.getElementById("header");
-const home = document.getElementById("home");
-const observerHome = new IntersectionObserver(function(entries, observerHome){
-    entries.forEach(entry => {
-        if(!entry.isIntersecting){
-            header.classList.add("header--scrolled");
-        }else if(entry.isIntersecting){
-            header.classList.remove("header--scrolled");
-        }
-    })
-}, {
-    rootMargin: "-20% 0% 0% 0%"
-});
-observerHome.observe(home);
-
-/* XXX Responsive design */
-const faServicesIcons = Array.from(document.querySelectorAll(".fa-3x"));
-const faSocial = Array.from(document.querySelectorAll(".fa-facebook-square, .fa-instagram-square, .fa-linkedin"));
-
-if(screen.width <= 425){
-    faServicesIcons.forEach(icon => {
-        icon.classList.remove("fa-3x");
-        icon.classList.add("fa-2x");
+function headerScrolled() {
+    /* Header change color */
+    const header = document.getElementById("header");
+    const home = document.getElementById("home");
+    const observerHome = new IntersectionObserver(function(entries, observerHome){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                header.classList.add("header--scrolled");
+            }else if(entry.isIntersecting){
+                header.classList.remove("header--scrolled");
+            }
+        })
+    }, {
+        rootMargin: "-20% 0% 0% 0%"
     });
+    observerHome.observe(home);
 }
+document.addEventListener('DOMContentLoaded', headerScrolled);
+
+/* XXX Header links animations */
+function headerLinksAnimate() {
+    const headerLinks = Array.from(document.querySelectorAll(".navbar ul li a"));
+    const sections = Array.from(document.querySelectorAll("section"));
+    //Add intersection observer for each section
+    sections.forEach(section =>{
+        const observerSection = new IntersectionObserver(function(entries){
+            //Get currently intersected section
+            entries.forEach(entry =>{
+                if(entry.isIntersecting & entry.target.id != "hire"){
+                    //Compare intersected section content with header link content and add class
+                    const intersectedSection = entry.target.id;
+                    const intersectedLink = headerLinks.filter(link => link.innerHTML.toLowerCase() == intersectedSection);
+                    intersectedLink[0].parentElement.classList.add("selected-link");
+                }
+                // Remove class from links
+                else if(!entry.isIntersecting & entry.target.id != "hire"){
+                    let redSection = entry.target.id;
+                    let redLink = headerLinks.filter(link => link.innerHTML.toLowerCase() == redSection)
+                    redLink[0].parentElement.classList.remove("selected-link");
+                }
+            })
+        }, {
+            rootMargin: "-30% 0% -30% 0%",
+            threshold: 0.25
+        });
+        observerSection.observe(section);
+    })
+}
+document.addEventListener('DOMContentLoaded', headerLinksAnimate);
+
 
 /* XXX Home text animation */
 class TypeWriter{
@@ -90,3 +114,20 @@ class TypeWriter{
         // Init TypeWriter
         new TypeWriter(txtElement, words, wait);
     }
+
+
+/* XXX Responsive design */
+function responsiveDesign() {
+    const faServicesIcons = Array.from(document.querySelectorAll(".fa-3x"));
+    const faSocial = Array.from(document.querySelectorAll(".fa-facebook-square, .fa-instagram-square, .fa-linkedin"));
+    
+    if(screen.width <= 425){
+        faServicesIcons.forEach(icon => {
+            icon.classList.remove("fa-3x");
+            icon.classList.add("fa-2x");
+        });
+    }
+}
+document.addEventListener('DOMContentLoaded', responsiveDesign);
+
+/* XXX Gallery filtering */

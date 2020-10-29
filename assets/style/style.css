@@ -87,6 +87,11 @@ mark{
     color: var(--red-dark);
     transform: translateY(300%);
 }
+.selected-link{
+    border-bottom: 1px solid var(--red-dark);
+    margin-bottom: -1px;
+    transition: border-bottom .6s ease-in;
+}
 
 /* XXX HEADER */
 header{
@@ -125,7 +130,6 @@ header{
 }
 .navbar li:hover{
     border-bottom: 1px solid var(--white);
-    margin-bottom: -1px;
 }
 
 /* XXX HOME */
@@ -301,7 +305,7 @@ header{
     background-color: white;
     padding: 1rem 2rem;
 }
-.resume-grid--item section{
+.resume-grid--item aside{
     margin: 0 0 2rem 0;
 }
 .resume-grid--item h5{
@@ -380,7 +384,7 @@ header{
 /* XXX CONTACT */
 .contact-grid--container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr .4fr;
     grid-template-rows: 1fr;
     grid-gap: 1rem;
 }
@@ -442,7 +446,7 @@ header{
 .contact-info-grid--container{
     display: grid;
     grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 0fr;
 }
 /* YYY icon */
 .contact-info-grid--item1{
@@ -675,4 +679,8 @@ footer{
     .footer-top h2{
         font-size: 2.3rem;
     }
+}
+
+.test{
+    display: none;
 }
