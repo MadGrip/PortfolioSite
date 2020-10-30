@@ -291,6 +291,14 @@ header{
 .services-grid--item{
     text-align: center;
     background-color: var(--white);
+    border-radius: 2%;
+}
+.services-grid--item:hover{
+    position: relative;
+    border-bottom: 5px solid red;
+    margin-bottom: -5px;
+    transition: transform 200ms ease-in;
+    transform: translateY(-3%);
 }
 .services-grid--item i{
     color: var(--red);
