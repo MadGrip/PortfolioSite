@@ -178,5 +178,13 @@ document.addEventListener('DOMContentLoaded', galleryFiltering);
 
 /* XXX Smooth Scroll */
 const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 800
+    speed: 800,
+    speedAsDuration: true
+});
+
+
+/* XXX Particles JS */
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
 });

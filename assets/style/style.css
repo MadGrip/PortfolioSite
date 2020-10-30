@@ -94,7 +94,9 @@ a.anchor {
     color: var(--red-dark);
     transform: translateY(300%);
 }
-
+#particles-js{
+    height: 100vh;
+}
 
 
 
