@@ -63,6 +63,12 @@ mark{
     padding: 0;
     color: currentColor;
 }
+a.anchor {
+    display: block;
+    position: relative;
+    top: -4rem;
+    visibility: hidden;
+}
 .shadow{
     box-shadow: rgba(58, 78, 95, 0.2) 0 10px 16px, rgba(58, 78, 95, 0.05) 0 -5px 16px;
 }
@@ -88,11 +94,7 @@ mark{
     color: var(--red-dark);
     transform: translateY(300%);
 }
-.selected-link{
-    border-bottom: 1px solid var(--red-dark);
-    margin-bottom: -1px;
-    transition: border-bottom .6s ease-in;
-}
+
 
 
 
@@ -130,9 +132,16 @@ header{
     margin: .1rem .5rem;
     flex-grow: 1;
     line-height: 100%;
+    margin-bottom: 1px;
 }
 .navbar li:hover{
     border-bottom: 1px solid var(--white);
+}
+
+.selected-link{
+    border-bottom: 1px solid var(--red-dark);
+    margin-bottom: -1px !important;
+    transition: border-bottom .6s ease-in;
 }
 
 /* XXX HOME */
@@ -211,6 +220,7 @@ header{
     width: 33.333333333%;
     margin: 1rem 0;
     padding: 0 .7rem;
+    box-sizing: border-box;
 }
 .about-col-info > p{
     color: var(--black-dark);
@@ -633,7 +643,7 @@ footer{
     .services-grid--container{
         grid-template-columns: repeat(2, 1fr);
     }
-    .portfolio-filter-container ul {
+    .portfolio-filter--container ul {
         width: 75%;
     }
     .contact-grid--container{
@@ -655,6 +665,14 @@ footer{
     .resume-grid--item{
         padding: 1rem 1rem;
     }
+    .portfolio-filter--container ul{
+        width: 80%;
+        margin: 1rem auto;
+    }
+    .portfolio-filter--container li{
+        margin: 0 .3rem;
+        font-size: .8rem;
+    }
     .contact-form--item4{
         width: 100%;
     }
@@ -663,6 +681,9 @@ footer{
 @media (max-width: 426px){
     section {
         margin-bottom: 1rem;
+    }
+    .container {
+        padding: .5rem;
     }
     .section-title > p {
         padding: 0;
@@ -695,9 +716,8 @@ footer{
     .services-grid--item p{
         padding-bottom: 1rem;
     }
-    .portfolio-filter-container ul{
-        margin: 1rem auto;
-        width: 90%;
+    .portfolio-filter--container ul{
+        width: 100%;
     }
     footer{
         grid-template-rows: 1fr .3fr;

@@ -41,8 +41,8 @@ function headerLinksAnimate() {
                 }
             })
         }, {
-            rootMargin: "-30% 0% -30% 0%",
-            threshold: 0.25
+            rootMargin: "-20% 0% -60% 0%",
+            threshold: 0
         });
         observerSection.observe(section);
     })
