@@ -4,6 +4,7 @@
     --white-transparent: rgba(255, 255, 255, 0.16);
     --red: #e34f5f;
     --red-dark: #e43a4b;
+    --red-light: rgb(255, 128, 128);
     --grey: #a3a5a5;
     --grey-light: #eee;
     --black-light: #212121;
@@ -92,6 +93,8 @@ mark{
     margin-bottom: -1px;
     transition: border-bottom .6s ease-in;
 }
+
+
 
 /* XXX HEADER */
 header{
@@ -351,19 +354,30 @@ header{
     color: var(--black-light);
 }
 /* YYY navigation */
-.portfolio-filter-container{
+.portfolio-filter--container{
     flex-grow: 1;
 }
-.portfolio-filter-container ul{
+.portfolio-filter--container ul{
     display: flex;
     padding: 0;
-    width: 50%;
-    margin: 2rem auto;    
+    width: 60%;
+    margin: 2rem auto;
+    justify-content: space-between;  
 }
-.portfolio-filter-container li{
+.portfolio-filter--container li{
     flex-grow: 1;
     color: var(--black-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: fit-content;
 }
+.portfolio-filter--container li:hover{
+    color: var(--red-dark);
+    cursor: pointer;
+}
+
 /* YYY gallery */
 .portfolio-grid--container{
     flex-grow: 1;
@@ -372,6 +386,9 @@ header{
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1rem;
 }
+.portfolio-grid--block{
+    display: none;
+}
 .portfolio-img{
     position: relative;
     padding: 1rem;
@@ -379,6 +396,15 @@ header{
 .portfolio-img img{
     max-width: 100%;
     height: auto;
+}
+
+.li--filtered{
+    border-bottom: 1px solid var(--red-dark);
+    margin-bottom: -1px;
+    color: var(--red-dark);
+}
+.img--show{
+    display: block;
 }
 
 /* XXX CONTACT */
@@ -681,6 +707,3 @@ footer{
     }
 }
 
-.test{
-    display: none;
-}
