@@ -175,3 +175,8 @@ function galleryFiltering() {
     })
 }
 document.addEventListener('DOMContentLoaded', galleryFiltering);
+
+/* XXX Smooth Scroll */
+const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800
+});

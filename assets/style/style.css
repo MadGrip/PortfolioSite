@@ -637,6 +637,12 @@ footer{
     .about-col-info-socials{
         max-width: none;
     }
+    footer{
+        grid-template-rows: 2fr 1fr;
+    }
+    .footer-top{
+        padding: 1rem 0;
+    }
 }
 /* YYY 675px and bellow */
 @media (max-width: 676px){
@@ -652,9 +658,6 @@ footer{
     }
     .portfolio-grid--container{
         grid-template-columns: 1fr;
-    }
-    .footer-top{
-        padding: 1rem 0;
     }
 }
 /* YYY 550 and bellow */
