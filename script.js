@@ -49,6 +49,36 @@ function headerLinksAnimate() {
 }
 document.addEventListener('DOMContentLoaded', headerLinksAnimate);
 
+/* XXX Header hamburger menu animation */
+function hamburgerMenu(){
+    const navbar = document.querySelector("div.navbar");
+    const anchors = Array.from(document.querySelectorAll(".navbar ul li a"));
+    const label = document.querySelector(".header-checkbox-label");
+    const labelCS = window.getComputedStyle(label);
+
+    function labelChangeColor(color){
+        if(labelCS.color === "rgb(255, 255, 255)"){
+            label.style.color = "red";
+        }else{
+            label.style.color = "var(--white)";
+        }
+    }
+
+    //Toggle navigation menu display
+    label.addEventListener("click", function() {
+        navbar.classList.toggle("navigation--show");
+        labelChangeColor(labelCS)    
+    })
+
+    //Close menu when link is clicked
+    anchors.forEach(anchor => {
+        anchor.addEventListener("click", function(){
+            navbar.classList.toggle("navigation--show");
+            labelChangeColor(labelCS);
+        })
+    })
+}
+document.addEventListener('DOMContentLoaded', hamburgerMenu);
 
 /* XXX Home text animation */
 class TypeWriter{
@@ -101,19 +131,17 @@ class TypeWriter{
         setTimeout(() => this.type(), typeSpeed);
     }
 }
+// YYY Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
 
-
-  // YYY Init On DOM Load
-    document.addEventListener('DOMContentLoaded', init);
-
-  // YYY Init App
-    function init() {
-        const txtElement = document.querySelector('.type-effect');
-        const wait = txtElement.getAttribute('data-wait');
-        const words = JSON.parse(txtElement.getAttribute('data-words'));
-        // Init TypeWriter
-        new TypeWriter(txtElement, words, wait);
-    }
+// YYY Init App
+function init() {
+    const txtElement = document.querySelector('.type-effect');
+    const wait = txtElement.getAttribute('data-wait');
+    const words = JSON.parse(txtElement.getAttribute('data-words'));
+    // Init TypeWriter
+    new TypeWriter(txtElement, words, wait);
+}
 
 
 /* XXX Responsive design */

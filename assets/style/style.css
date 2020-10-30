@@ -96,6 +96,7 @@ a.anchor {
 }
 #particles-js{
     height: 100vh;
+    position: absolute;
 }
 
 
@@ -138,6 +139,7 @@ header{
 }
 .navbar li:hover{
     border-bottom: 1px solid var(--white);
+    margin-bottom: -1px;
 }
 
 .selected-link{
@@ -574,7 +576,10 @@ footer{
         right: 8%;
         top: 17%;
     }
-    .header-checkbox:checked ~ div.navbar{
+    /* .header-checkbox:checked ~ div.navbar{
+        transform: scale(1,1);
+    } */
+    .navigation--show{
         transform: scale(1,1);
     }
     .navbar ul{
@@ -592,8 +597,7 @@ footer{
         border-bottom: 1px solid var(--grey);
     }
     .navbar li:hover{
-        border: none;
-        margin-bottom: none;
+        border-bottom: 1px solid var(--grey);
     }
     .navbar li:focus{
         outline: none;
@@ -664,6 +668,9 @@ footer{
 }
 /* YYY 550 and bellow */
 @media (max-width: 551px){
+    .navbar ul{
+        margin-top: 5%;
+    }
     .about-photo-container{
         display: none;
     }
@@ -684,6 +691,9 @@ footer{
 }
 /* YYY 425 and bellow */
 @media (max-width: 426px){
+    .navbar ul{
+        margin-top: 5%;
+    }
     section {
         margin-bottom: 1rem;
     }
@@ -732,3 +742,9 @@ footer{
     }
 }
 
+/* YYY 375 and bellow */
+@media (max-width: 476px){
+    .navbar ul{
+        margin-top: 7%;
+    }
+}
