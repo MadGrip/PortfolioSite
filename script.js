@@ -131,46 +131,47 @@ function responsiveDesign() {
 document.addEventListener('DOMContentLoaded', responsiveDesign);
 
 /* XXX Gallery filtering */
-const filters = Array.from(document.querySelectorAll(".portfolio-filter--container ul li"));
-const imageBlocks = Array.from(document.querySelectorAll(".portfolio-grid--block"));
-const images = Array.from(document.querySelectorAll(".portfolio-grid--block div a img"));
-//Default values when page loads
-let clickedFilter = Array.from(document.querySelectorAll(".portfolio-filter--container ul li"))[0];
-let filteredImages = images;
+function galleryFiltering() {
+    const filters = Array.from(document.querySelectorAll(".portfolio-filter--container ul li"));
+    const imageBlocks = Array.from(document.querySelectorAll(".portfolio-grid--block"));
+    const images = Array.from(document.querySelectorAll(".portfolio-grid--block div a img"));
+    //Default values when page loads
+    let clickedFilter = Array.from(document.querySelectorAll(".portfolio-filter--container ul li"))[0];
+    let filteredImages = images;
 
-//Add default styles for ALL filter and show all images
-clickedFilter.classList.add("li--filtered");
-filteredImages.forEach(img => {
-    img.parentElement.parentElement.parentElement.classList.add("img--show");
-})
-
-//Add event listener to every link
-filters.forEach(filter => {
-    filter.addEventListener("click", function(){
-        //YYY FILTER ... Remove class from previously clicked filter
-        clickedFilter.classList.remove("li--filtered");
-        //Find clicked filter and add class to it
-        clickedFilter = filter;
-        clickedFilter.classList.add("li--filtered");
-        let clickedFilterText = filter.innerText.toLowerCase();
-        console.log(clickedFilter);
-
-        //YYY IMG .... Hide all unrelevant images
-        filteredImages.forEach(img => {
-            img.parentElement.parentElement.parentElement.classList.remove("img--show");
-        })
-        //Find relevant images and show them
-        if(clickedFilterText == "all"){
-            filteredImages = images;
-            filteredImages.forEach(img => {
-                img.parentElement.parentElement.parentElement.classList.add("img--show");
-            })
-        }else{
-            filteredImages = images.filter(image => image.getAttribute("data-id").includes(clickedFilterText));
-            console.log(filteredImages);
-            filteredImages.forEach(img => {
-                img.parentElement.parentElement.parentElement.classList.add("img--show");
-            })
-        }
+    //Add default styles for ALL filter and show all images
+    clickedFilter.classList.add("li--filtered");
+    filteredImages.forEach(img => {
+        img.parentElement.parentElement.parentElement.classList.add("img--show");
     })
-})
+
+    //Add event listener to every link
+    filters.forEach(filter => {
+        filter.addEventListener("click", function(){
+            //YYY FILTER ... Remove class from previously clicked filter
+            clickedFilter.classList.remove("li--filtered");
+            //Find clicked filter and add class to it
+            clickedFilter = filter;
+            clickedFilter.classList.add("li--filtered");
+            let clickedFilterText = filter.innerText.toLowerCase();
+
+            //YYY IMG .... Hide all unrelevant images
+            filteredImages.forEach(img => {
+                img.parentElement.parentElement.parentElement.classList.remove("img--show");
+            })
+            //Find relevant images and show them
+            if(clickedFilterText == "all"){
+                filteredImages = images;
+                filteredImages.forEach(img => {
+                    img.parentElement.parentElement.parentElement.classList.add("img--show");
+                })
+            }else{
+                filteredImages = images.filter(image => image.getAttribute("data-id").includes(clickedFilterText));
+                filteredImages.forEach(img => {
+                    img.parentElement.parentElement.parentElement.classList.add("img--show");
+                })
+            }
+        })
+    })
+}
+document.addEventListener('DOMContentLoaded', galleryFiltering);
