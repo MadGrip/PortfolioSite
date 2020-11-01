@@ -143,6 +143,13 @@ function init() {
     new TypeWriter(txtElement, words, wait);
 }
 
+/* XXX Skillbar animations */
+const skillbars = Array.from(document.querySelectorAll(".skill--bar-black"));
+//Get skillbar.aria-value-now
+//set it to 0
+//update it to old value
+//add timer for animation
+
 
 /* XXX Responsive design */
 function responsiveDesign() {
@@ -166,6 +173,7 @@ function galleryFiltering() {
     //Default values when page loads
     let clickedFilter = Array.from(document.querySelectorAll(".portfolio-filter--container ul li"))[0];
     let filteredImages = images;
+    let lightbox = "all";
 
     //Add default styles for ALL filter and show all images
     clickedFilter.classList.add("li--filtered");
@@ -187,16 +195,18 @@ function galleryFiltering() {
             filteredImages.forEach(img => {
                 img.parentElement.parentElement.parentElement.classList.remove("img--show");
             })
-            //Find relevant images and show them
+            //Find relevant images and show them + add them to lightbox
             if(clickedFilterText == "all"){
                 filteredImages = images;
                 filteredImages.forEach(img => {
                     img.parentElement.parentElement.parentElement.classList.add("img--show");
+                    img.parentElement.setAttribute("data-lightbox", "all");
                 })
             }else{
                 filteredImages = images.filter(image => image.getAttribute("data-id").includes(clickedFilterText));
                 filteredImages.forEach(img => {
                     img.parentElement.parentElement.parentElement.classList.add("img--show");
+                    img.parentElement.setAttribute("data-lightbox", clickedFilterText);
                 })
             }
         })
