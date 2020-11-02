@@ -792,6 +792,9 @@ footer{
     .portfolio-filter--container ul{
         width: 100%;
     }
+    .contact-info--item{
+        margin-bottom: .7rem;
+    }
     footer{
         grid-template-rows: 1fr .3fr;
     }
