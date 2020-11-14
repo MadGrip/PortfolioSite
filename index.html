@@ -1,4 +1,6 @@
 <!--
+I didn't delete this notes on purpose, so you could see how I built this site. I use VS Code extension called TODO-Tree that lets me mark text by custom tags as XXX, YYY, DONE, BUG, FIXME, TODO etc.. and highlite it. You can see all the problems I encountered and all tasks I've accomplished during development.
+
 XXX SITE
 DONE RESPONSIVE DESIGN
     DONE 1920 x 1080
@@ -62,463 +64,519 @@ https://preview.themeforest.net/item/niko-resume-wordpress-theme/full_screen_pre
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathias Handle</title>
-    <link rel="stylesheet" href="assets/style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d0d28bc357.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-</head>
 
-<body>
-    <!-- XXX HEADER -->
-<header id="header">
-        <div class="brand">
-            <a href="#home">Mathias</a>
-        </div>
-        <input type="checkbox" id="header-checkbox" class="header-checkbox">
-        <label for="header-checkbox" class="header-checkbox-label">
-            <i class="fas fa-bars fa-2x"></i>
-        </label>
-        <div class="navbar">            
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about2">About</a></li>
-                    <li><a href="#services2">Services</a></li>
-                    <li><a href="#resume2">Resume</a></li>
-                    <li><a href="#portfolio2">Portfolio</a></li>
-                    <li><a href="#contact2">Contact</a></li>
-                </ul>        
-            </nav>            
-        </div>        
-</header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mathias Handle</title>
+        <link rel="stylesheet" href="assets/style/style.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d0d28bc357.js" crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    </head>
 
-<main>
-    <!-- XXX HOME -->
-    <section id="home">
-        <div id="particles-js"></div>
-        <div class="home-container container">
-            <div class="home-box">
-                <h2>Mathias Handle</h2>
-                <p>I'm Passionate <span class="type-effect" data-wait="3000" data-words='["Developer", "Photographer", "Traveller"]'></span>|</p>
-                <div class="download">
-                    <a href="#home">Download CV</a>
-                </div>
-                </div>
-        </div>
-        
-    </section>
-
-    <!-- XXX ABOUT ME-->
-    <a class="anchor" id="about2"></a>
-    <section id="about" class="container">
-        <!-- YYY TITLE -->
-        <div class="section-title">
-            <h3><mark>About</mark> Me</h3>
-            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Reprehenderit non ad aliquip labore duis. Laborum elit amet amet laborum id do mollit ullamco exercitation consectetur sunt velit eiusmod excepteur. Elit elit nulla ea et incididunt minim in dolor est aliqua exercitation sint laboris laboris. Esse veniam culpa irure commodo incididunt id sunt minim ullamco quis esse. Est sit consequat mollit quis.</p>
-        </div>
-        <!-- YYY CONTENT -->
-        <div class="section-content shadow">
-            <!-- YYY PHOTO -->
-            <div class="about-photo-container">
-            <div class="about-col-photo flex-grow-equal">
-                <img src="https://images.unsplash.com/photo-1521429737669-ae70d53a4c95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Me Mathias Handle">
+    <body>
+        <!-- XXX HEADER -->
+        <header id="header">
+            <div class="brand">
+                <a href="#home">Mathias</a>
             </div>
+            <input type="checkbox" id="header-checkbox" class="header-checkbox">
+            <label for="header-checkbox" class="header-checkbox-label">
+                <i class="fas fa-bars fa-2x"></i>
+            </label>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about2">About</a></li>
+                        <li><a href="#services2">Services</a></li>
+                        <li><a href="#resume2">Resume</a></li>
+                        <li><a href="#portfolio2">Portfolio</a></li>
+                        <li><a href="#contact2">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <!-- YYY INFO -->
-            <div class="about-col-info flex-grow-equal">                
-                <h4>Information</h4>
-                <p>Name: <span>Mathias Handle</span></p>
-                <p>Birthday: <span>20.04.1998</span></p>
-                <p>Phone: <a href="tel:+421 948 434 841">+421 948 434 841</a></p>
-                <p>E-mail: <a href="mailto:mathiashandle@gmail.com">mathiashandle@gmail.com</a></p>
-                <div class="about-col-info-socials">
-                    <a href="http:facebook.com">
-                        <i class="fab fa-facebook-square fa-2x"></i>
-                    </a>
-                    <a href="http:instagram.com">
-                        <i class="fab fa-instagram-square fa-2x"></i>
-                    </a>
-                    <a href="http:linkedin.com">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- YYY SKILLS -->
-            <div class="col-skills flex-grow-equal">
-                <h4>Skills</h4>
-                <div class="about-skill--block">
-                    <h6>HTML</h6>
-                    <div class="skill--bar">
-                        <div class="skill--bar-black" role="progressbar" aria-valuenow="85%" aria-valuemin="0%" aria-valuemax="100%" style="width: 85%;">
-                            <span>85%</span>
+        </header>
+
+        <main>
+            <!-- XXX HOME -->
+            <section id="home">
+                <div id="particles-js"></div>
+                <div class="home-container container">
+                    <div class="home-box">
+                        <h2>Mathias Handle</h2>
+                        <p>I'm Passionate <span class="type-effect" data-wait="3000"
+                                data-words='["Developer", "Photographer", "Traveller"]'></span>|</p>
+                        <div class="download">
+                            <a href="#home">Download CV</a>
                         </div>
-                    </div>                    
-                </div>
-                
-                <div class="about-skill--block">
-                    <h6>CSS</h6>
-                    <div class="skill--bar">
-                        <div class="skill--bar-black" role="progressbar" aria-valuenow="70%" aria-valuemin="0%" aria-valuemax="100%" style="width: 70%;">
-                            <span>70%</span>
-                        </div>
-                    </div>                    
-                </div>
-                
-                <div class="about-skill--block">
-                    <h6>JS</h6>
-                    <div class="skill--bar">
-                        <div class="skill--bar-black" role="progressbar" aria-valuenow="40%" aria-valuemin="0%" aria-valuemax="100%" style="width: 40%;">
-                            <span>40%</span>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- XXX SERVICES -->
-    <a class="anchor" id="services2"></a>
-    <section id="services" class="grey-bg">
-        <div class="container">
-        <div class="section-title">
-            <h3><mark>My</mark> Services</h3>
-            <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt. Reprehenderit non ad aliquip labore duis. Laborum elit amet amet laborum id do mollit.</p>
-        </div>
-
-        <div class="services-grid--container">
-            <div class="services-grid--item shadow-blocks">            
-                <i class="fas fa-desktop fa-3x"></i>
-                <h6>Lorem Ipsum</h6>
-                <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat mollit quis.</p>
-            </div>
-
-            <div class="services-grid--item shadow-blocks">
-                <i class="fas fa-layer-group fa-3x"></i>
-                <h6>Lorem Ipsum</h6>
-                <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat mollit quis.</p>
-            </div>
-
-            <div class="services-grid--item shadow-blocks">
-                <i class="fas fa-palette fa-3x"></i>
-                <h6>Lorem Ipsum</h6>
-                <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat mollit quis.</p>
-            </div>
-
-            <div class="services-grid--item shadow-blocks">
-                <i class="far fa-clone fa-3x"></i>
-                <h6>Lorem Ipsum</h6>
-                <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat mollit quis.</p>
-            </div>
-            
-            <div class="services-grid--item shadow-blocks">
-                <i class="fas fa-cogs fa-3x"></i>
-                <h6>Lorem Ipsum</h6>
-                <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat mollit quis.</p>
-            </div>
-
-            <div class="services-grid--item shadow-blocks">            
-                <i class="fas fa-tags fa-3x"></i>
-                <h6>Lorem Ipsum</h6>
-                <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat mollit quis.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- XXX RESUME -->
-    <a class="anchor" id="resume2"></a>
-    <section id="resume">
-        <div class="container">
-        <div class="section-title">
-            <h3><mark>My</mark> Resume</h3>
-            <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
-        </div>
-
-        <div class="resume-grid--container">
-            <div class="resume-grid--item shadow">
-                <aside>
-                    <h5>Work</h5>
-                    <h6>Apple</h6>
-                    <time>Oct 24 - December 31</time>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
-                </aside>
-                <aside>
-                    <h5>Work</h5>
-                    <h6>Apple</h6>
-                    <time>Oct 24 - December 31</time>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
-                </aside>
-            </div>
-
-            <div class="resume-grid--item shadow">
-                <aside>
-                    <h5>Work</h5>
-                    <h6>Apple</h6>
-                    <time>Oct 24 - December 31</time>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
-                </aside>
-                <aside>
-                    <h5>Work</h5>
-                    <h6>Apple</h6>
-                    <time>Oct 24 - December 31</time>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
-                </aside>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- XXX HIRE ME -->
-    <section id="hire">
-        <div class="section-title">
-            <h3>I'm available for freelance</h3>
-            <a href="#contact">HIRE ME NOW</a>
-        </div>
-    </section>
-    <!-- XXX PORTFOLIO -->
-    <a class="anchor" id="portfolio2"></a>
-    <section id="portfolio">
-        <div class="container">
-        <div class="section-title">
-            <h3><mark>My</mark> Portfolio</h3>
-            <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
-        </div>
-        <!-- YYY navigation -->
-        <div class="portfolio-content">
-            <div class="portfolio-filter--container">
-                <ul>
-                    <li>ALL</></li>
-                    <li>Branding</li>
-                    <li>Photoshop</li>
-                    <li>Fashion</li>
-                    <li>Products</li>
-                </ul>
-            </div>
-            <!-- YYY IMAGES -->
-            <div class="portfolio-grid--container">
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg" alt="photo1" data-id="branding products">
-                        </a>
                     </div>
                 </div>
 
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
+            </section>
+
+            <!-- XXX ABOUT ME-->
+            <a class="anchor" id="about2"></a>
+            <section id="about" class="container">
+                <!-- YYY TITLE -->
+                <div class="section-title">
+                    <h3><mark>About</mark> Me</h3>
+                    <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Reprehenderit non ad aliquip
+                        labore duis. Laborum elit amet amet laborum id do mollit ullamco exercitation consectetur sunt
+                        velit eiusmod excepteur. Elit elit nulla ea et incididunt minim in dolor est aliqua exercitation
+                        sint laboris laboris. Esse veniam culpa irure commodo incididunt id sunt minim ullamco quis
+                        esse. Est sit consequat mollit quis.</p>
+                </div>
+                <!-- YYY CONTENT -->
+                <div class="section-content shadow">
+                    <!-- YYY PHOTO -->
+                    <div class="about-photo-container">
+                        <div class="about-col-photo flex-grow-equal">
+                            <img src="https://images.unsplash.com/photo-1521429737669-ae70d53a4c95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                                alt="Me Mathias Handle">
                         </div>
                     </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-2.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-2.jpg" alt="photo2" data-id="photoshop">
-                        </a>
+                    <!-- YYY INFO -->
+                    <div class="about-col-info flex-grow-equal">
+                        <h4>Information</h4>
+                        <p>Name: <span>Mathias Handle</span></p>
+                        <p>Birthday: <span>20.04.1998</span></p>
+                        <p>Phone: <a href="tel:+421 948 434 841">+421 948 434 841</a></p>
+                        <p>E-mail: <a href="mailto:mathiashandle@gmail.com">mathiashandle@gmail.com</a></p>
+                        <div class="about-col-info-socials">
+                            <a href="http:facebook.com">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a href="http:instagram.com">
+                                <i class="fab fa-instagram-square fa-2x"></i>
+                            </a>
+                            <a href="http:linkedin.com">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- YYY SKILLS -->
+                    <div class="col-skills flex-grow-equal">
+                        <h4>Skills</h4>
+                        <div class="about-skill--block">
+                            <h6>HTML</h6>
+                            <div class="skill--bar">
+                                <div class="skill--bar-black" role="progressbar" aria-valuenow="85%" aria-valuemin="0%"
+                                    aria-valuemax="100%" style="width: 85%;">
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-skill--block">
+                            <h6>CSS</h6>
+                            <div class="skill--bar">
+                                <div class="skill--bar-black" role="progressbar" aria-valuenow="70%" aria-valuemin="0%"
+                                    aria-valuemax="100%" style="width: 70%;">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-skill--block">
+                            <h6>JS</h6>
+                            <div class="skill--bar">
+                                <div class="skill--bar-black" role="progressbar" aria-valuenow="40%" aria-valuemin="0%"
+                                    aria-valuemax="100%" style="width: 40%;">
+                                    <span>40%</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
+            <!-- XXX SERVICES -->
+            <a class="anchor" id="services2"></a>
+            <section id="services" class="grey-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <h3><mark>My</mark> Services</h3>
+                        <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat
+                            incididunt. Reprehenderit non ad aliquip labore duis. Laborum elit amet amet laborum id do
+                            mollit.</p>
                     </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-3.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-3.jpg" alt="photo3" data-id="fashion products">
-                        </a>
+
+                    <div class="services-grid--container">
+                        <div class="services-grid--item shadow-blocks">
+                            <i class="fas fa-desktop fa-3x"></i>
+                            <h6>Lorem Ipsum</h6>
+                            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat
+                                mollit quis.</p>
+                        </div>
+
+                        <div class="services-grid--item shadow-blocks">
+                            <i class="fas fa-layer-group fa-3x"></i>
+                            <h6>Lorem Ipsum</h6>
+                            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat
+                                mollit quis.</p>
+                        </div>
+
+                        <div class="services-grid--item shadow-blocks">
+                            <i class="fas fa-palette fa-3x"></i>
+                            <h6>Lorem Ipsum</h6>
+                            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat
+                                mollit quis.</p>
+                        </div>
+
+                        <div class="services-grid--item shadow-blocks">
+                            <i class="far fa-clone fa-3x"></i>
+                            <h6>Lorem Ipsum</h6>
+                            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat
+                                mollit quis.</p>
+                        </div>
+
+                        <div class="services-grid--item shadow-blocks">
+                            <i class="fas fa-cogs fa-3x"></i>
+                            <h6>Lorem Ipsum</h6>
+                            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat
+                                mollit quis.</p>
+                        </div>
+
+                        <div class="services-grid--item shadow-blocks">
+                            <i class="fas fa-tags fa-3x"></i>
+                            <h6>Lorem Ipsum</h6>
+                            <p>Veniam aliquip officia ullamco sit et cupidatat ea excepteur duis. Est sit consequat
+                                mollit quis.</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
+            <!-- XXX RESUME -->
+            <a class="anchor" id="resume2"></a>
+            <section id="resume">
+                <div class="container">
+                    <div class="section-title">
+                        <h3><mark>My</mark> Resume</h3>
+                        <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat
+                            incididunt.</p>
                     </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-4.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-4.jpg" alt="photo4" data-id="fashion">
-                        </a>
+
+                    <div class="resume-grid--container">
+                        <div class="resume-grid--item shadow">
+                            <aside>
+                                <h5>Work</h5>
+                                <h6>Apple</h6>
+                                <time>Oct 24 - December 31</time>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus
+                                    praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae
+                                    consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                            </aside>
+                            <aside>
+                                <h5>Work</h5>
+                                <h6>Apple</h6>
+                                <time>Oct 24 - December 31</time>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus
+                                    praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae
+                                    consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                            </aside>
+                        </div>
+
+                        <div class="resume-grid--item shadow">
+                            <aside>
+                                <h5>Work</h5>
+                                <h6>Apple</h6>
+                                <time>Oct 24 - December 31</time>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus
+                                    praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae
+                                    consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                            </aside>
+                            <aside>
+                                <h5>Work</h5>
+                                <h6>Apple</h6>
+                                <time>Oct 24 - December 31</time>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id, quidem doloribus
+                                    praesentium dignissimos voluptate, eveniet ea accusantium laborum dolore sequi quae
+                                    consequuntur, voluptatem iusto eligendi sint ut recusandae. Laudantium!</p>
+                            </aside>
+                        </div>
                     </div>
                 </div>
-
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
+            </section>
+            <!-- XXX HIRE ME -->
+            <section id="hire">
+                <div class="section-title">
+                    <h3>I'm available for freelance</h3>
+                    <a href="#contact">HIRE ME NOW</a>
+                </div>
+            </section>
+            <!-- XXX PORTFOLIO -->
+            <a class="anchor" id="portfolio2"></a>
+            <section id="portfolio">
+                <div class="container">
+                    <div class="section-title">
+                        <h3><mark>My</mark> Portfolio</h3>
+                        <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat
+                            incididunt.</p>
                     </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-5.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-5.jpg" alt="photo5" data-id="branding">
-                        </a>
+                    <!-- YYY navigation -->
+                    <div class="portfolio-content">
+                        <div class="portfolio-filter--container">
+                            <ul>
+                                <li>ALL</>
+                                </li>
+                                <li>Branding</li>
+                                <li>Photoshop</li>
+                                <li>Fashion</li>
+                                <li>Products</li>
+                            </ul>
+                        </div>
+                        <!-- YYY IMAGES -->
+                        <div class="portfolio-grid--container">
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg"
+                                            alt="photo1" data-id="branding products">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-2.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-2.jpg"
+                                            alt="photo2" data-id="photoshop">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-3.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-3.jpg"
+                                            alt="photo3" data-id="fashion products">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-4.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-4.jpg"
+                                            alt="photo4" data-id="fashion">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-5.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-5.jpg"
+                                            alt="photo5" data-id="branding">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-6.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-6.jpg"
+                                            alt="photo6" data-id="products">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-7.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-7.jpg"
+                                            alt="photo7" data-id="branding photoshop">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-8.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-8.jpg"
+                                            alt="photo8" data-id="products">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-grid--block shadow-blocks">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-cross">
+                                        <div class="vertical"></div>
+                                        <div class="horizontal"></div>
+                                    </div>
+                                    <div class="img-text">
+                                        <p>Our Photography</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-img">
+                                    <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg"
+                                        data-lightbox="all">
+                                        <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg"
+                                            alt="photo9" data-id="fashion">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
+                </div>
+            </section>
+            <!-- XXX CONTACT -->
+            <a class="anchor" id="contact2"></a>
+            <section id="contact" class="grey-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <h3><mark>My</mark> Contact</h3>
+                        <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat
+                            incididunt.</p>
                     </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-6.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-6.jpg" alt="photo6" data-id="products">
-                        </a>
+
+                    <div class="contact-grid--container">
+                        <!-- YYY FORM -->
+                        <div class="contact-form shadow">
+                            <h6>Drop me a line</h6>
+                            <p>I'll answer all your questions.</p>
+                            <form id="contact-form">
+                                <input type="text" name="Name" form="contactForm" class="contact-form--item1"
+                                    placeholder="Name">
+                                <input type="email" name="Email" class="contact-form--item2" form="contactForm"
+                                    placeholder="E-mail">
+                                <textarea name="Comment" form="contactForm" class="contact-form--item3" id="" cols="30"
+                                    rows="10" placeholder="Your comment"></textarea>
+                                <button class="contact-form--item4">GET IN TOUCH</button>
+                            </form>
+                        </div>
+                        <!-- YYY INFO -->
+                        <div class="contact-info shadow">
+                            <div class="contact-info--item contact-info-grid--container">
+                                <i class="fas fa-map-marker-alt fa-2x contact-info-grid--item1"></i>
+                                <h6 class=" contact-info-grid--item2">Address</h6>
+                                <p class=" contact-info-grid--item3">Obežná 5-3, 010 08 Žilina-Vlčince</p>
+                            </div>
+                            <div class="contact-info--item contact-info-grid--container">
+                                <i class="fas fa-envelope fa-2x contact-info-grid--item1"></i>
+                                <h6 class=" contact-info-grid--item2">E-mail</h6>
+                                <p class=" contact-info-grid--item3">mathiashandle@gmail.com</p>
+                            </div>
+                            <div class="contact-info--item contact-info-grid--container">
+                                <i class="fas fa-phone fa-2x contact-info-grid--item1"></i>
+                                <h6 class=" contact-info-grid--item2">Phone</h6>
+                                <p class=" contact-info-grid--item3">+421 948 434 841</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+        </main>
 
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-7.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-7.jpg" alt="photo7" data-id="branding photoshop">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-8.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-8.jpg" alt="photo8" data-id="products">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="portfolio-grid--block shadow-blocks">
-                    <div class="portfolio-info">
-                        <div class="portfolio-cross">
-                            <div class="vertical"></div>
-                            <div class="horizontal"></div>
-                        </div>
-                        <div class="img-text">
-                            <p>Our Photography</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-img">
-                        <a href="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg" data-lightbox="all">
-                            <img src="https://www.pxdraft.com/themeforest/martin/static/img/portfolio-1.jpg" alt="photo9" data-id="fashion">
-                        </a>
-                    </div>
-                </div>                
+        <!-- XXX FOOTER -->
+        <footer>
+            <div class="footer-top footer-grid--item">
+                <h2>Mathias</h2>
+                <a href="http://facebook.com"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="http://instagram.com"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="http://linkedin.com"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
-        </div>
-        </div>
-        </div>
-    </section>
-    <!-- XXX CONTACT -->
-    <a class="anchor" id="contact2"></a>
-    <section id="contact" class="grey-bg">
-        <div class="container">
-        <div class="section-title">
-            <h3><mark>My</mark> Contact</h3>
-            <p>Anim magna sunt adipisicing adipisicing Lorem reprehenderit eiusmod eiusmod qui fugiat incididunt.</p>
-        </div>
+            <div class="footer-bottom footer-grid--item">
+                <p>2020 Design "borrowed" from Theme Forest</p>
+            </div>
+        </footer>
+    </body>
 
-        <div class="contact-grid--container">
-            <!-- YYY FORM -->
-            <div class="contact-form shadow">
-                <h6>Drop me a line</h6>
-                <p>I'll answer all your questions.</p>
-                <form id="contact-form">
-                    <input type="text" name="Name" form="contactForm" class="contact-form--item1" placeholder="Name">
-                    <input type="email" name="Email" class="contact-form--item2" form="contactForm" placeholder="E-mail">
-                    <textarea name="Comment" form="contactForm" class="contact-form--item3" id="" cols="30" rows="10" placeholder="Your comment"></textarea>
-                    <button class="contact-form--item4">GET IN TOUCH</button>
-                </form>
-            </div>
-            <!-- YYY INFO -->
-            <div class="contact-info shadow">
-                <div class="contact-info--item contact-info-grid--container">
-                    <i class="fas fa-map-marker-alt fa-2x contact-info-grid--item1"></i>
-                    <h6 class=" contact-info-grid--item2">Address</h6>
-                    <p class=" contact-info-grid--item3">Obežná 5-3, 010 08 Žilina-Vlčince</p>
-                </div>
-                <div class="contact-info--item contact-info-grid--container">
-                    <i class="fas fa-envelope fa-2x contact-info-grid--item1"></i>
-                    <h6 class=" contact-info-grid--item2">E-mail</h6>
-                    <p class=" contact-info-grid--item3">mathiashandle@gmail.com</p>
-                </div>
-                <div class="contact-info--item contact-info-grid--container">
-                    <i class="fas fa-phone fa-2x contact-info-grid--item1"></i>
-                    <h6 class=" contact-info-grid--item2">Phone</h6>
-                    <p class=" contact-info-grid--item3">+421 948 434 841</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-</main>
-    
-    <!-- XXX FOOTER -->
-    <footer>        
-        <div class="footer-top footer-grid--item">
-            <h2>Mathias</h2>
-            <a href="http://facebook.com"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a href="http://instagram.com"><i class="fab fa-instagram-square fa-2x"></i></a>
-            <a href="http://linkedin.com"><i class="fab fa-linkedin fa-2x"></i></a>
-        </div>
-        <div class="footer-bottom footer-grid--item">
-            <p>2020 Design "borrowed" from Theme Forest</p>
-        </div>
+    <footer>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     </footer>
-</body>
 
-<footer>
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-</footer>
 </html>
