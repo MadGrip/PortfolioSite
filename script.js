@@ -32,9 +32,7 @@ function headerLinksAnimate() {
 					if (entry.isIntersecting & (entry.target.id != "hire")) {
 						//Compare intersected section content with header link content and add class
 						const intersectedSection = entry.target.id;
-						const intersectedLink = headerLinks.filter(
-							(link) => link.innerHTML.toLowerCase() == intersectedSection
-						);
+						const intersectedLink = headerLinks.filter((link) => link.innerHTML.toLowerCase() == intersectedSection);
 						intersectedLink[0].parentElement.classList.add("selected-link");
 					}
 					// Remove class from links
@@ -151,10 +149,10 @@ function init() {
 
 /* XXX Skillbar animations */
 const skillbars = Array.from(document.querySelectorAll(".skill--bar-black"));
-//Get skillbar.aria-value-now
-//set it to 0
-//update it to old value
-//add timer for animation
+//TODO Get skillbar.aria-value-now
+//TODO set it to 0
+//TODO update it to old value
+//TODO add timer for animation
 
 /* XXX Responsive design */
 function responsiveDesign() {
