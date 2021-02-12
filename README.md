@@ -9,14 +9,16 @@ Names, adresses and other contact informations are not valid!
 # Used libraries
 
 [particles.js](https://vincentgarreau.com/particles.js/)
+
 [smooth-scroll](https://github.com/cferdinandi/smooth-scroll)
+
 [lightbox](https://lokeshdhakar.com/projects/lightbox2/)
 
 ![](view.png)
 
 # Author
 
-Mathias Handle
+  Mathias Handle
 
 # License
 
