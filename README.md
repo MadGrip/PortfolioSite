@@ -4,7 +4,7 @@ Mockup portfolio site using vanilla JS and third party libraries.
 
 # Disclaimer
 
-Names, adresses and other contact informations are not valid!
+Names, adresses and other contact informations are fictional!
 
 # Used libraries
 
