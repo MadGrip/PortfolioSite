@@ -4,6 +4,8 @@ Mockup portfolio site using vanilla JS and third party libraries.
 
 https://mathiashandle.netlify.app/
 
+![](view.png)
+
 # Disclaimer
 
 Names, adresses and other contact informations are fictional!
@@ -16,7 +18,6 @@ Names, adresses and other contact informations are fictional!
 
 [lightbox](https://lokeshdhakar.com/projects/lightbox2/)
 
-![](view.png)
 
 # Author
 
